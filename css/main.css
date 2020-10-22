@@ -89,7 +89,7 @@ header nav ul li a{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-flow:row wrap; /* i think it does the same as flex-wra[:wrap*/
+	flex-flow:row wrap; /* i think it does the same as flex-wrap*/
 }
 
 .main-image img {
@@ -154,4 +154,32 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: .875em;
+}
+
+@media all and (min-width:768px) { /*tablet view*/
+.bottom-section {
+	justify-content: space-between; /*aligns content evenly along x-axis*/
+	align-items: flex-start;
+	border-top: 1px solid #eee;
+}
+
+.section-one,
+.section-two,
+.section-three {
+ border-top: none;
+ flex-basis: 30%; /*makes it officially become 3 columns*/
+}
+
+.section-two {
+	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
+	padding: 0 20px;
+}
+}
+
+@media all and (min-width: 1200px) { /*desktop view*/
+header nav ul {
+	display: flex;
+	justify-content: space-between;
+}
 }
